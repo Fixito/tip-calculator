@@ -93,7 +93,7 @@ function Form({
               type='radio'
               checked={tip === '25'}
               name='tip'
-              id='input3'
+              id='input4'
               value='25'
               onChange={handleSelectTip}
             />

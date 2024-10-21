@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
-- Live Site URL: [Demo](https://fem-tip-calculator-app.netlify.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/tip-calculator-app-mdu64MsUBn)
+- [Live Site URL](https://dwwm-tip-calculator-app.netlify.app/)
 
 ## My process
 
