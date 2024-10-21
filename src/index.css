@@ -55,6 +55,18 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .wrapper {
   padding-block-start: 3.125rem;
   display: grid;
@@ -74,7 +86,6 @@ input[type='number'] {
   box-shadow: 0 32px 43px 0 hsla(186, 38%, 50%, 20.07%);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   grid-auto-flow: column;
 }
 
@@ -191,7 +202,7 @@ input[type='number'] {
 
 .display {
   background-color: var(--brand);
-  margin-block-start: 2rem;
+  margin-block-start: 1rem;
   padding: 2.5rem;
   border-radius: 0.9375rem;
   display: flex;
@@ -266,6 +277,12 @@ input[type='number'] {
 
   .container {
     flex-direction: row;
+    gap: 3rem;
+  }
+
+  .form {
+    padding-inline-end: 0;
+    flex: 1.5;
   }
 
   .tip-amount-wrapper {
