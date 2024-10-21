@@ -1,14 +1,7 @@
 import dollar from '../assets/images/icon-dollar.svg';
 import person from '../assets/images/icon-person.svg';
 
-function Form({
-  billAmount,
-  handleBillAmountInput,
-  handlePeopleAmountInput,
-  handleSelectedTip,
-  people,
-  showPeopleError,
-}) {
+function Form() {
   const handleSubmit = (e) => {
     e.prenventDefault();
   };
@@ -29,8 +22,6 @@ function Form({
             name='bill'
             id='bill'
             placeholder='0'
-            onInput={handleBillAmountInput}
-            value={billAmount}
           />
           <img src={dollar} alt='' aria-hidden='true' className='icon' />
         </div>
@@ -40,52 +31,23 @@ function Form({
         <p className='label'>Selected tip %</p>
         <div className='tip-amount-wrapper'>
           <div className='tip-amount'>
-            <input
-              type='radio'
-              name='tip'
-              value='.05'
-              onChange={handleSelectedTip}
-            />
+            <input type='radio' name='tip' value='.05' />
             <div className='tip-btn'>5%</div>
           </div>
           <div className='tip-amount'>
-            <input
-              type='radio'
-              name='tip'
-              className='tip-btn'
-              value='.1'
-              onChange={handleSelectedTip}
-            />
+            <input type='radio' name='tip' className='tip-btn' value='.1' />
             <div className='tip-btn'>10%</div>
           </div>
           <div className='tip-amount'>
-            <input
-              type='radio'
-              name='tip'
-              className='tip-btn'
-              value='0.15'
-              onChange={handleSelectedTip}
-            />
+            <input type='radio' name='tip' className='tip-btn' value='0.15' />
             <div className='tip-btn'>15%</div>
           </div>
           <div className='tip-amount'>
-            <input
-              type='radio'
-              name='tip'
-              className='tip-btn'
-              value='.25'
-              onChange={handleSelectedTip}
-            />
+            <input type='radio' name='tip' className='tip-btn' value='.25' />
             <div className='tip-btn'>25%</div>
           </div>
           <div className='tip-amount'>
-            <input
-              type='radio'
-              name='tip'
-              className='tip-btn'
-              value='.5'
-              onChange={handleSelectedTip}
-            />
+            <input type='radio' name='tip' className='tip-btn' value='.5' />
             <div className='tip-btn'>50%</div>
           </div>
           <input
@@ -100,19 +62,11 @@ function Form({
       <div className='label-group'>
         <div className='label-wrapper'>
           <label htmlFor='people'>Number of People</label>
-          {showPeopleError && (
-            <p className='error'>Can&apos;t divide by zero</p>
-          )}
+
+          <p className='error'>Can&apos;t divide by zero</p>
         </div>
         <div className='number-wrapper'>
-          <input
-            type='number'
-            name='people'
-            id='people'
-            placeholder='0'
-            onChange={handlePeopleAmountInput}
-            value={people}
-          />
+          <input type='number' name='people' id='people' placeholder='0' />
           <img src={person} alt='' aria-hidden='true' className='icon' />
         </div>
       </div>
