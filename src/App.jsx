@@ -41,6 +41,7 @@ function App() {
 
   return (
     <main className='wrapper'>
+      <h1 className='sr-only'>Splitter</h1>
       <img src={logo} alt='Splitter logo' className='logo' />
       <div className='container'>
         <Form
